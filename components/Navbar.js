@@ -13,28 +13,28 @@ function MobileNav({open, setOpen}) {
             <p className="text-xl font-semibold">Amichand Yadav</p>
             </div>
             <div className="flex flex-col ml-4">
-                <Link  href="/" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
-                 <a className="text-xl font-medium my-4">
+                <Link  href="/" legacyBehavior  >
+                 <a onClick={() => setTimeout(() => {setOpen(!open)}, 100)} className="text-xl font-medium my-4" >
                     HOME
                 </a>
                 </Link>
-                <Link  href="/#about" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
-                 <a className="text-xl font-medium my-4">
+                <Link  href="/#about" legacyBehavior  >
+                 <a onClick={() => setTimeout(() => {setOpen(!open)}, 100)} className="text-xl font-medium my-4">
                     ABOUT
                 </a>
                 </Link>
-                <Link  href="#skills" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
-                 <a className="text-xl font-medium my-4">
+                <Link  href="#skills" legacyBehavior  >
+                 <a onClick={() => setTimeout(() => {setOpen(!open)}, 100)} className="text-xl font-medium my-4">
                     SKILLS
                 </a>
                 </Link>
-                <Link  href="/#projects" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
-                 <a className="text-xl font-medium my-4">
+                <Link  href="/#projects" legacyBehavior  >
+                 <a onClick={() => setTimeout(() => {setOpen(!open)}, 100)} className="text-xl font-medium my-4">
                     PROJECTS
                 </a>
                 </Link>
-                <Link  href="/#contact" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
-                 <a className="text-xl font-medium my-4">
+                <Link  href="/#contact" legacyBehavior  >
+                 <a onClick={() => setTimeout(() => {setOpen(!open)}, 100)} className="text-xl font-medium my-4">
                     CONTACT
                 </a>
                 </Link>
