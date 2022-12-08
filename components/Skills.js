@@ -7,7 +7,6 @@ import Tailwind from '../public/skills/tailwind.png';
 import Github from '../public/skills/github1.png';
 import Firebase from '../public/skills/firebase.png';
 import NextJS from '../public/skills/nextjs.png'
-// import AWS from '../public/skills/aws.png';
 
  function Skills() {
   return (
