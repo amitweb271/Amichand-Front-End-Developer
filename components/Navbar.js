@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState } from 'react'
 function NavLink({to, children}) {
     return <a href={to} className={`mx-4`}>
@@ -9,24 +10,34 @@ function MobileNav({open, setOpen}) {
     return (
         <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
-                <a className="text-xl font-semibold" href="/">Amichand Yadav</a>
+            <Link href="/" legacyBehavior>   <a className="text-xl font-semibold">Amichand Yadav</a></Link> 
             </div>
             <div className="flex flex-col ml-4">
-                 <a className="text-xl font-medium my-4" href="/" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                <Link  href="/" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
+                 <a className="text-xl font-medium my-4">
                     HOME
                 </a>
-                <a className="text-xl font-medium my-4" href="/#about" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                </Link>
+                <Link  href="/#about" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
+                 <a className="text-xl font-medium my-4">
                     ABOUT
                 </a>
-                <a className="text-xl font-medium my-4" href="/#skills" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                </Link>
+                <Link  href="#skills" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
+                 <a className="text-xl font-medium my-4">
                     SKILLS
                 </a>
-                <a className="text-xl font-normal my-4" href="/#projects" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                </Link>
+                <Link  href="/#projects" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
+                 <a className="text-xl font-medium my-4">
                     PROJECTS
                 </a>
-                <a className="text-xl font-normal my-4" href="/#contact" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                </Link>
+                <Link  href="/#contact" legacyBehavior onClick={() => setTimeout(() => {setOpen(!open)}, 100)} >
+                 <a className="text-xl font-medium my-4">
                     CONTACT
                 </a>
+                </Link>
             </div>  
         </div>
     )
@@ -39,7 +50,9 @@ export default function Navbar() {
         <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
-                <a className="text-2xl font-semibold" href="/">Amichand Yadav</a>
+                <Link  href="/" legacyBehavior>
+                <a className="text-2xl font-semibold" >Amichand Yadav</a>
+                </Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">
 
